@@ -70,7 +70,7 @@ export default function Home() {
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Achal Gupta home">AG<span>.</span></a>
         <div className="navLinks">
-          <a href="/case-studies">Case studies</a><a href="/experience">Experience</a><a href="/leadership">Leadership</a><a href="/writing">Writing</a>
+          <a href="/case-studies">Case studies</a><a href="/experience">Experience</a><a href="/leadership">Leadership</a><a href="/writing">Writing</a><a href="/lab">AI Lab</a>
           <a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
       </nav>
