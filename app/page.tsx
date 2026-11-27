@@ -103,7 +103,7 @@ export default function Home() {
 
       <section className="leadership" id="leadership">
         <div className="shell">
-          <div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership is grounded in making complex product environments easier to navigate—and giving teams the structure to make better decisions.</p><p className="targetRole">Targeting Director and Senior Director roles leading Data, AI, Analytics, and platform product portfolios.</p></div></div>
+          <div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership is grounded in making complex product environments easier to navigate—and giving teams the structure to make better decisions.</p><p className="targetRole">Leadership scope: no direct reports in my current SiriusXM role; enterprise influence through Data and AI operating models, 10–15-team commerce programs, and Director-to-VP alignment. Targeting Director and Senior Director roles leading Data, AI, Analytics, and platform product portfolios.</p></div></div>
           <div className="principleGrid">{principles.map((principle, index) => <article key={principle.title}><span>0{index + 1}</span><h3>{principle.title}</h3><p>{principle.copy}</p></article>)}</div>
         </div>
       </section>
