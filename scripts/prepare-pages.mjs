@@ -8,21 +8,17 @@ async function walk(dir) {
     if (entry.isDirectory()) await walk(file);
     else if (['.html', '.css', '.js'].includes(extname(file))) {
       let text = await readFile(file, 'utf8');
-      for (const [from, to] of [
-        ['/_next/', '/achal-portfolio/_next/'],
-        ['/case-studies', '/achal-portfolio/case-studies'],
-        ['/experience', '/achal-portfolio/experience'],
-        ['/leadership', '/achal-portfolio/leadership'],
-        ['/writing', '/achal-portfolio/writing'],
-        ['/resume', '/achal-portfolio/resume'],
-        ['/achal-gupta-executive-resume.pdf', '/achal-portfolio/achal-gupta-executive-resume.pdf'],
-      ]) {
-        text = text.replaceAll(from, to);
-      }
-      text = text.replaceAll('href="/"', 'href="/achal-portfolio/"');
-      text = text.replaceAll('href="/#', 'href="/achal-portfolio/#');
-      text = text.replaceAll('"/#', '"/achal-portfolio/#');
-      text = text.replaceAll('":"/', '":"/achal-portfolio/');
+      text = text
+        .replaceAll('/_next/', '/achal-portfolio/_next/')
+        .replace(/(?<!\/achal-portfolio)\/case-studies/g, '/achal-portfolio/case-studies')
+        .replace(/(?<!\/achal-portfolio)\/experience/g, '/achal-portfolio/experience')
+        .replace(/(?<!\/achal-portfolio)\/leadership/g, '/achal-portfolio/leadership')
+        .replace(/(?<!\/achal-portfolio)\/writing/g, '/achal-portfolio/writing')
+        .replace(/(?<!\/achal-portfolio)\/resume/g, '/achal-portfolio/resume')
+        .replace(/(?<!\/achal-portfolio)\/achal-gupta-executive-resume\.pdf/g, '/achal-portfolio/achal-gupta-executive-resume.pdf')
+        .replaceAll('href="/"', 'href="/achal-portfolio/"')
+        .replaceAll('href="/#', 'href="/achal-portfolio/#')
+        .replaceAll('"/#', '"/achal-portfolio/#');
       await writeFile(file, text);
     }
   }
