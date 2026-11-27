@@ -23,3 +23,4 @@ async function walk(dir) {
   }
 }
 await walk(root);
+await writeFile(join(root, '.nojekyll'), '');
