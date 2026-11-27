@@ -17,6 +17,8 @@ async function walk(dir) {
         .replaceAll('href="/leadership', 'href="/achal-portfolio/leadership')
         .replaceAll('href="/writing', 'href="/achal-portfolio/writing')
         .replaceAll('href="/resume', 'href="/achal-portfolio/resume')
+        .replaceAll('href="/achal-gupta-executive-resume.pdf', 'href="/achal-portfolio/achal-gupta-executive-resume.pdf')
+        .replaceAll('href="/"', 'href="/achal-portfolio/"')
         .replaceAll('href="/#', 'href="/achal-portfolio/#');
       await writeFile(file, text);
     }
