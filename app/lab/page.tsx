@@ -13,7 +13,7 @@ export default function LabPage() {
     <main>
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="/achal-portfolio/">AG<span>.</span></a>
-        <div className="navLinks"><a href="/achal-portfolio/">Home</a>
+        <div className="navLinks"><a href="/achal-portfolio/">Home</a><a href="/achal-portfolio/">Home</a>
           <a href="/achal-portfolio/case-studies">Case studies</a>
           <a href="/achal-portfolio/experience">Experience</a>
           <a href="/achal-portfolio/leadership">Leadership</a>
