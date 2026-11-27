@@ -70,7 +70,7 @@ export default function Home() {
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Achal Gupta home">AG<span>.</span></a>
         <div className="navLinks">
-          <a href="/case-studies">Case studies</a><a href="/experience">Experience</a><a href="/leadership">Leadership</a><a href="/writing">Writing</a><a href="/achal-portfolio/lab">AI Lab</a>
+          <a href="/achal-portfolio/case-studies">Case studies</a><a href="/achal-portfolio/experience">Experience</a><a href="/achal-portfolio/leadership">Leadership</a><a href="/achal-portfolio/writing">Writing</a><a href="/achal-portfolio/lab">AI Lab</a>
           <a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
       </nav>
@@ -94,20 +94,20 @@ export default function Home() {
       <section className="work shell" id="impact">
         <div className="sectionHeading"><p className="sectionLabel">Selected impact</p><div><h2>Three examples of product judgment in action.</h2><p>Explore the detailed case studies behind my Data, AI, analytics, and commercialization work.</p></div></div>
         <div className="caseList">{caseStudies.map((item) => <article className="case" key={item.number}><div className="caseIndex">{item.number}</div><div className="caseBody"><p className="caseTag">{item.tag}</p><h3>{item.title}</h3><p className="decision">{item.copy}</p><ul>{item.meta.map((m) => <li key={m}>{m}</li>)}</ul></div></article>)}</div>
-        <a className="textLink" href="/case-studies">View all case studies →</a>
+        <a className="textLink" href="/achal-portfolio/case-studies">View all case studies →</a>
       </section>
 '      <section className="leadership" id="leadership">
-        <div className="shell"><div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership approach for complex Data and AI product environments.</p></div></div><a className="lightLink" href="/leadership">Explore leadership approach →</a></div>
+        <div className="shell"><div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership approach for complex Data and AI product environments.</p></div></div><a className="lightLink" href="/achal-portfolio/leadership">Explore leadership approach →</a></div>
       </section>
 
 '      <section className="toolkit"><div className="shell"><div className="sectionHeading compact"><p className="sectionLabel">Product toolkit</p><div><h2>Technical fluency with an operator&apos;s mindset.</h2><p>Comfortable moving from strategy and customer evidence to data requirements, governance, measurement, and delivery.</p></div></div><div className="toolGrid"><span>Databricks Genie AI</span><span>Azure data platforms</span><span>SQL &amp; data pipelines</span><span>Power BI &amp; KPI dashboards</span><span>Data governance &amp; SLAs</span><span>PRD / BRD development</span><span>Roadmaps &amp; prioritization</span><span>Pricing &amp; go-to-market</span></div></div></section>
 
 '      <section className="experience" id="experience">
-        <div className="shell"><div className="sectionHeading compact"><p className="sectionLabel">Experience</p><div><h2>Fourteen-plus years across data, analytics, and product.</h2><p>A career arc from engineering and BI to enterprise product leadership.</p></div></div><a className="textLink" href="/experience">View full experience →</a></div>
+        <div className="shell"><div className="sectionHeading compact"><p className="sectionLabel">Experience</p><div><h2>Fourteen-plus years across data, analytics, and product.</h2><p>A career arc from engineering and BI to enterprise product leadership.</p></div></div><a className="textLink" href="/achal-portfolio/experience">View full experience →</a></div>
       </section>
 
 ''      <section className="writing" id="thinking">
-        <div className="shell"><div className="writingIntro"><p className="sectionLabel">Writing</p><div><h2>Product judgment in the age of AI.</h2><p>Three essays on applying design thinking with AI.</p></div></div><a className="textLink" href="/writing">Read the article series →</a></div>
+        <div className="shell"><div className="writingIntro"><p className="sectionLabel">Writing</p><div><h2>Product judgment in the age of AI.</h2><p>Three essays on applying design thinking with AI.</p></div></div><a className="textLink" href="/achal-portfolio/writing">Read the article series →</a></div>
       </section>
 
 '      <footer><div className="shell footerGrid"><p className="sectionLabel light">What&apos;s next</p><div><h2>Building the next generation of Data &amp; AI products.</h2><div className="footerLinks"><a href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a><a href="/achal-gupta-executive-resume.pdf" download>Download executive profile <span>↓</span></a></div></div></div><div className="shell footerBottom"><span>Achal Gupta</span><span>Data · AI · Analytics Product Leadership</span><a href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
