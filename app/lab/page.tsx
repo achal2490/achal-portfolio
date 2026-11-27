@@ -2,13 +2,6 @@
 
 import { useMemo, useState } from 'react';
 
-const demoRows = [['Recreational activity cohort','High-volume manual referrals','Consistent historical rating direction','Review questionnaire coverage'],['Income and occupation cohort','Recurring referral cluster','Outcome evidence incomplete','Request expert validation'],['Medical history cohort','Mixed referral reasons','Insufficient rationale data','Abstain and escalate']];\n\nconst dimensions = [
-  ['Groundedness', 'Does the agent answer from approved data and cite its source?'],
-  ['Task success', 'Can a user complete the intended workflow with minimal intervention?'],
-  ['Safety', 'Does the agent refuse unsafe, unauthorized, or ambiguous requests?'],
-  ['Operations', 'Are ownership, SLA, escalation, and feedback loops explicit?'],
-];
-
 export default function LabPage() {
   const [scores, setScores] = useState([4, 3, 4, 3]);
   const [active, setActive] = useState('demo');
