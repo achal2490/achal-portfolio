@@ -67,7 +67,7 @@ const articles = [
 export default function Home() {
   return (
     <main>
-      <nav className="nav shell" aria-label="Primary navigation"><a className="brand" href="/achal-portfolio/" aria-label="Achal Gupta home">AG<span>.</span></a><div className="navLinks"><a href="/achal-portfolio/" className="active">Home</a><a href="/achal-portfolio/lab">AI Lab</a><a href="/achal-portfolio/case-studies">Case studies</a><a href="/achal-portfolio/experience">Work experience</a></div></nav>
+      <nav className="nav shell" aria-label="Primary navigation"><a className="brand" href="/achal-portfolio/" aria-label="Achal Gupta home">AG<span>.</span></a><div className="navLinks"><a href="/achal-portfolio/" className="active">Home</a><a href="/achal-portfolio/lab">AI Lab</a><a href="/achal-portfolio/case-studies">Case studies</a><a href="/achal-portfolio/experience">Work experience</a><a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></nav>
 
       <section className="hero shell" id="top">
         <div className="eyebrow"><span />Staff Data Product Manager at SiriusXM</div>
