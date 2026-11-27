@@ -166,3 +166,6 @@ html { scroll-padding-top: 92px; }
 .homeButton:hover { background: transparent; color: inherit; }
 .homeButton:hover::after { right: 0; }
 @media (max-width:800px) { .homeButton { margin-left: 10px; padding: 0; } }
+
+/* Remove any stale cached button markup; the canonical Home control is the regular nav link. */
+.homeButton { display: none !important; }
