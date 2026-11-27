@@ -22,7 +22,7 @@ export default function LabPage() {
           <a href="/achal-portfolio/case-studies">Case studies</a>
           <a href="/achal-portfolio/experience">Experience</a>
           <a href="/achal-portfolio/leadership">Leadership</a>
-          <a href="/achal-portfolio/writing">Writing</a>
+          <a href="/achal-portfolio/writing">Writing</a><a href="/achal-portfolio/lab">AI Lab</a>
           <a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
       </nav>
