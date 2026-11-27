@@ -70,7 +70,7 @@ export default function Home() {
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Achal Gupta home">AG<span>.</span></a>
         <div className="navLinks">
-          <a href="/achal-portfolio/case-studies">Case studies</a><a href="/achal-portfolio/experience">Experience</a><a href="/achal-portfolio/leadership">Leadership</a><a href="/achal-portfolio/writing">Writing</a><a href="/achal-portfolio/lab">AI Lab</a>
+          <a className="active" href="/achal-portfolio/lab">AI Lab</a><a href="/achal-portfolio/case-studies">Selected work</a><a href="/achal-portfolio/experience">Experience</a><a href="/achal-portfolio/writing">Writing</a>
           <a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
       </nav>
@@ -80,14 +80,12 @@ export default function Home() {
         <h1>Turning Data &amp; AI strategy into products that scale—and outcomes that matter.</h1>
         <p className="heroCopy">Fourteen-plus years across product strategy, analytics, and engineering—connecting enterprise ambition to governed adoption, commercial outcomes, and global growth.</p>
         <div className="heroActions">
-          <a className="primaryButton" href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a>
+          <a className="primaryButton" href="/achal-portfolio/lab">Explore the AI Lab <span>↗</span></a><a className="textLink" href="mailto:achal2490@gmail.com">Discuss a leadership opportunity</a>
           <a className="textLink" href="/achal-gupta-executive-resume.pdf" download>Download executive résumé ↓</a>
         </div>
         <div className="metrics">{outcomes.map((o) => <article className={o.wide ? "wideMetric" : ""} key={o.value}><strong><i className={o.trend === "down" ? "trendDown" : "trendUp"}>{o.trend === "down" ? "↓" : "↑"}</i>{o.value}</strong><span>{o.label}</span></article>)}</div>
         <p className="scopeLine">Data-side leadership across global commerce programs involving <strong>10–15 teams</strong> and <strong>30–40 cross-functional contributors</strong>.</p>
-      </section>
-
-      <section className="companyBand" aria-label="Career experience">
+      </section><section className="labPlaceholder" aria-labelledby="ai-lab-home"><div className="shell"><p className="sectionLabel light">AI Product Lab · Start here</p><h2 id="ai-lab-home">Practical AI product work, not just claims.</h2><p>Explore the current Underwriting IQ discovery project and the product artifacts I use to make AI opportunities testable, governed and measurable.</p><div className="footerLinks"><a href="/achal-portfolio/lab">Open the AI Lab <span>↗</span></a><a href="/achal-portfolio/underwriting-iq">View Underwriting IQ <span>↗</span></a></div></div></section><section className="companyBand" aria-label="Career experience">
         <div className="shell"><span className="companyLead">Experience across</span>{companies.map((company) => <span key={company}>{company}</span>)}</div>
       </section>
 
@@ -96,7 +94,7 @@ export default function Home() {
         <div className="caseList">{caseStudies.map((item) => <article className="case" key={item.number}><div className="caseIndex">{item.number}</div><div className="caseBody"><p className="caseTag">{item.tag}</p><h3>{item.title}</h3><p className="decision">{item.copy}</p><ul>{item.meta.map((m) => <li key={m}>{m}</li>)}</ul></div></article>)}</div>
         <a className="textLink" href="/achal-portfolio/case-studies">View all case studies →</a>
       </section>
-'      <section className="labPlaceholder" aria-labelledby="ai-lab-home"><div className="shell"><p className="sectionLabel light">AI Product Lab</p><h2 id="ai-lab-home">See the product work behind the words.</h2><p>Explore Underwriting IQ and practical AI product artifacts—evaluation, governance, discovery and decision-making made visible.</p><a className="lightLink" href="/achal-portfolio/lab">Open the AI Lab <span>↗</span></a></div></section>\n      <section className="leadership" id="leadership">
+'      \n      <section className="leadership" id="leadership">
         <div className="shell"><div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership approach for complex Data and AI product environments.</p></div></div><a className="lightLink" href="/achal-portfolio/leadership">Explore leadership approach →</a></div>
       </section>
 
