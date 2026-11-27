@@ -1,1 +1,0 @@
-# Achal Gupta Portfolio
