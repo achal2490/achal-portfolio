@@ -96,7 +96,7 @@ export default function Home() {
         <div className="caseList">{caseStudies.map((item) => <article className="case" key={item.number}><div className="caseIndex">{item.number}</div><div className="caseBody"><p className="caseTag">{item.tag}</p><h3>{item.title}</h3><p className="decision">{item.copy}</p><ul>{item.meta.map((m) => <li key={m}>{m}</li>)}</ul></div></article>)}</div>
         <a className="textLink" href="/achal-portfolio/case-studies">View all case studies →</a>
       </section>
-'      <section className="leadership" id="leadership">
+'      <section className="labPlaceholder" aria-labelledby="ai-lab-home"><div className="shell"><p className="sectionLabel light">AI Product Lab</p><h2 id="ai-lab-home">See the product work behind the words.</h2><p>Explore Underwriting IQ and practical AI product artifacts—evaluation, governance, discovery and decision-making made visible.</p><a className="lightLink" href="/achal-portfolio/lab">Open the AI Lab <span>↗</span></a></div></section>\n      <section className="leadership" id="leadership">
         <div className="shell"><div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership approach for complex Data and AI product environments.</p></div></div><a className="lightLink" href="/achal-portfolio/leadership">Explore leadership approach →</a></div>
       </section>
 
