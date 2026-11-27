@@ -4,7 +4,7 @@ import { useMemo, useState } from 'react';
 
 export default function LabPage() {
   const [scores, setScores] = useState([4, 3, 4, 3]);
-  const [active, setActive] = useState('demo');
+  const [active, setActive] = useState('placeholder');
   const average = useMemo(() => (scores.reduce((a, b) => a + b, 0) / scores.length).toFixed(1), [scores]);
 
   return (
@@ -32,21 +32,12 @@ export default function LabPage() {
       <section className="iqCard shell"><div><p className="sectionLabel">Independent project · In progress</p><h2>Underwriting IQ</h2><p>Agentic intelligence for automated life insurance underwriting—an end-to-end product discovery and governance case study.</p></div><a className="primaryButton" href="/achal-portfolio/underwriting-iq">Open project <span>↗</span></a></section>
 
       <section className="labPage shell">
-        <div className="labTabs" role="tablist" aria-label="AI product artifacts"><button className={active === 'demo' ? 'labTab active' : 'labTab'} onClick={() => setActive('demo')}>Try the workflow demo</button>
+        <div className="labTabs" role="tablist" aria-label="AI product artifacts"><button className={active === 'placeholder' ? 'labTab active' : 'labTab'} onClick={() => setActive('placeholder')}>Workflow demo · coming soon</button>
           <button className={active === 'scorecard' ? 'labTab active' : 'labTab'} onClick={() => setActive('scorecard')}>Agent evaluation scorecard</button>
           <button className={active === 'opportunity' ? 'labTab active' : 'labTab'} onClick={() => setActive('opportunity')}>Opportunity canvas</button>
         </div>
 
-        {active === 'demo' && (
-          <article className="labArtifact demoArtifact">
-            <div className="labArtifactHeader"><div><p className="sectionLabel">Interactive synthetic demo</p><h2>Underwriting IQ · Referral Pattern Investigator</h2><p>Explore how an agentic workflow could surface a referral pattern, show its evidence boundary and prepare a proposal for Chief Underwriter review.</p></div><div className="labScore"><strong>Demo</strong><span>synthetic data only</span></div></div>
-            <div className="demoControls"><label>Referral population<select defaultValue="all"><option value="all">All manual referrals</option><option>High-volume cohorts</option><option>Rule-specific referrals</option></select></label><label>Evidence threshold<select defaultValue="exploratory"><option value="exploratory">Exploratory</option><option>Evidence-led</option></select></label></div>
-            <div className="demoResult"><div><p className="sectionLabel">Pattern surfaced</p><h3>Recurring recreational-activity cohort</h3><p>High-volume referrals show a consistent historical rating direction in this synthetic cohort. The workflow recommends reviewing questionnaire coverage—not changing a rule automatically.</p></div><div className="demoStats"><span><b>184</b> synthetic applications</span><span><b>72%</b> exploratory evidence match</span><span><b>Review</b> decision state</span></div></div>
-            <div className="demoSteps"><span className="done">01 Ingest referrals</span><span className="done">02 Find pattern</span><span className="done">03 Ground evidence</span><span>04 Expert review</span></div>
-            <div className="labCallout"><b>Guardrail</b><span>This demo cannot infer underwriting rationale, approve a rule, or represent production underwriting advice. It uses synthetic data and preserves Chief Underwriter decision authority.</span></div>
-          </article>
-        )}
-        {active === 'scorecard' && (
+        {active === 'placeholder' && (\n          <article className="labArtifact"><p className="sectionLabel">Placeholder · not built yet</p><h2>Interactive agentic workflow</h2><p className="labLead">A practical demo will be added here once the Underwriting IQ workflow, synthetic data and evaluation approach are built and tested.</p><div className="labCallout"><b>Planned scope</b><span>Show a referral-pattern investigation from input data to evidence summary, uncertainty, human review and a proposed next action. This is a future artifact, not a completed product.</span></div></article>\n        )}\n\n        {active === 'scorecard' && (
           <article className="labArtifact">
             <div className="labArtifactHeader"><div><p className="sectionLabel">Independent framework</p><h2>Agent Evaluation Scorecard</h2><p>Use this before expanding an agent beyond a pilot. Adjust the sliders to see how product readiness changes.</p></div><div className="labScore"><strong>{average}</strong><span>/ 5 readiness</span></div></div>
             <div className="labRows">{dimensions.map(([name, prompt], i) => <label className="labRow" key={name}><span><b>{name}</b><small>{prompt}</small></span><input type="range" min="1" max="5" value={scores[i]} onChange={e => setScores(scores.map((s, j) => j === i ? Number(e.target.value) : s))} /><strong>{scores[i]}</strong></label>)}</div>
