@@ -2,6 +2,8 @@
 
 import { useMemo, useState } from 'react';
 
+const dimensions = [['Groundedness','Does the agent answer from approved data and cite its source?'],['Task success','Can a user complete the intended workflow with minimal intervention?'],['Safety','Does the agent refuse unsafe, unauthorized or ambiguous requests?'],['Operations','Are ownership, SLA, escalation and feedback loops explicit?']];
+
 export default function LabPage() {
   const [scores, setScores] = useState([4, 3, 4, 3]);
   const [active, setActive] = useState('placeholder');
@@ -37,7 +39,11 @@ export default function LabPage() {
           <button className={active === 'opportunity' ? 'labTab active' : 'labTab'} onClick={() => setActive('opportunity')}>Opportunity canvas</button>
         </div>
 
-        {active === 'placeholder' && (\n          <article className="labArtifact"><p className="sectionLabel">Placeholder · not built yet</p><h2>Interactive agentic workflow</h2><p className="labLead">A practical demo will be added here once the Underwriting IQ workflow, synthetic data and evaluation approach are built and tested.</p><div className="labCallout"><b>Planned scope</b><span>Show a referral-pattern investigation from input data to evidence summary, uncertainty, human review and a proposed next action. This is a future artifact, not a completed product.</span></div></article>\n        )}\n\n        {active === 'scorecard' && (
+        {active === 'placeholder' && (
+          <article className="labArtifact"><p className="sectionLabel">Placeholder · not built yet</p><h2>Interactive agentic workflow</h2><p className="labLead">A practical demo will be added here once the Underwriting IQ workflow, synthetic data and evaluation approach are built and tested.</p><div className="labCallout"><b>Planned scope</b><span>Show a referral-pattern investigation from input data to evidence summary, uncertainty, human review and a proposed next action. This is a future artifact, not a completed product.</span></div></article>
+        )}
+
+        {active === 'scorecard' && (
           <article className="labArtifact">
             <div className="labArtifactHeader"><div><p className="sectionLabel">Independent framework</p><h2>Agent Evaluation Scorecard</h2><p>Use this before expanding an agent beyond a pilot. Adjust the sliders to see how product readiness changes.</p></div><div className="labScore"><strong>{average}</strong><span>/ 5 readiness</span></div></div>
             <div className="labRows">{dimensions.map(([name, prompt], i) => <label className="labRow" key={name}><span><b>{name}</b><small>{prompt}</small></span><input type="range" min="1" max="5" value={scores[i]} onChange={e => setScores(scores.map((s, j) => j === i ? Number(e.target.value) : s))} /><strong>{scores[i]}</strong></label>)}</div>
