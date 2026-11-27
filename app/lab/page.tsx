@@ -41,7 +41,6 @@ export default function LabPage() {
       <section className="labPage shell">
         <div className="labTabs" role="tablist" aria-label="AI product artifacts">
           <button className={active === 'scorecard' ? 'labTab active' : 'labTab'} onClick={() => setActive('scorecard')}>Agent evaluation scorecard</button>
-          <button className={active === 'operating' ? 'labTab active' : 'labTab'} onClick={() => setActive('operating')}>GenAI operating model</button>
           <button className={active === 'opportunity' ? 'labTab active' : 'labTab'} onClick={() => setActive('opportunity')}>Opportunity canvas</button>
         </div>
 
@@ -50,16 +49,6 @@ export default function LabPage() {
             <div className="labArtifactHeader"><div><p className="sectionLabel">Independent framework</p><h2>Agent Evaluation Scorecard</h2><p>Use this before expanding an agent beyond a pilot. Adjust the sliders to see how product readiness changes.</p></div><div className="labScore"><strong>{average}</strong><span>/ 5 readiness</span></div></div>
             <div className="labRows">{dimensions.map(([name, prompt], i) => <label className="labRow" key={name}><span><b>{name}</b><small>{prompt}</small></span><input type="range" min="1" max="5" value={scores[i]} onChange={e => setScores(scores.map((s, j) => j === i ? Number(e.target.value) : s))} /><strong>{scores[i]}</strong></label>)}</div>
             <div className="labCallout"><b>Decision rule</b><span>Do not scale on model quality alone. Require evidence across user value, governance, and operating readiness.</span></div>
-          </article>
-        )}
-
-        {active === 'operating' && (
-          <article className="labArtifact">
-            <p className="sectionLabel">Professional evidence · SiriusXM</p>
-            <h2>Genie adoption operating model</h2>
-            <p className="labLead">A reusable framework developed with the Data Organization to support enterprise Genie Agent adoption.</p>
-            <div className="labGrid">{[['01', 'Governance', 'Approved data, ownership, access, and responsible-use guardrails.'], ['02', 'Best practices', 'Reusable patterns for agent design, prompts, testing, and feedback.'], ['03', 'Service model', 'SLAs, escalation paths, support ownership, and change management.'], ['04', 'Measurement', 'Usage trend, adoption, feedback rate, and signals for iteration.']].map(x => <div className="labCard" key={x[0]}><span>{x[0]}</span><h3>{x[1]}</h3><p>{x[2]}</p></div>)}</div>
-            <div className="labCallout"><b>Evidence boundary</b><span>Initial adoption covered Finance, Contact Centre, Marketing, and Content Strategy, with approximately 10 business users. This page does not represent a production deployment.</span></div>
           </article>
         )}
 
