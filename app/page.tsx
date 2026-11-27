@@ -70,7 +70,7 @@ export default function Home() {
       <nav className="nav shell" aria-label="Primary navigation">
         <a className="brand" href="#top" aria-label="Achal Gupta home">AG<span>.</span></a>
         <div className="navLinks">
-          <a href="/case-studies">Case studies</a><a href="/experience">Experience</a><a href="/leadership">Leadership</a><a href="/writing">Writing</a>
+          <a href="/achal-portfolio/case-studies">Case studies</a><a href="/achal-portfolio/experience">Experience</a><a href="/achal-portfolio/leadership">Leadership</a><a href="/achal-portfolio/writing">Writing</a>
           <a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a>
         </div>
       </nav>
@@ -81,7 +81,7 @@ export default function Home() {
         <p className="heroCopy">Fourteen-plus years across product strategy, analytics, and engineering—connecting enterprise ambition to governed adoption, commercial outcomes, and global growth.</p>
         <div className="heroActions">
           <a className="primaryButton" href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a>
-          <a className="textLink" href="/achal-gupta-executive-resume.pdf" download>Download executive résumé ↓</a>
+          <a className="textLink" href="/achal-portfolio/achal-gupta-executive-resume.pdf" download>Download executive résumé ↓</a>
         </div>
         <div className="metrics">{outcomes.map((o) => <article className={o.wide ? "wideMetric" : ""} key={o.value}><strong><i className={o.trend === "down" ? "trendDown" : "trendUp"}>{o.trend === "down" ? "↓" : "↑"}</i>{o.value}</strong><span>{o.label}</span></article>)}</div>
         <p className="scopeLine">Data-side leadership across global commerce programs involving <strong>10–15 teams</strong> and <strong>30–40 cross-functional contributors</strong>.</p>
@@ -124,7 +124,7 @@ export default function Home() {
         </div>
       </section>
 
-      <footer><div className="shell footerGrid"><p className="sectionLabel light">What&apos;s next</p><div><h2>Building the next generation of Data &amp; AI products.</h2><div className="footerLinks"><a href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a><a href="/achal-gupta-executive-resume.pdf" download>Download executive profile <span>↓</span></a></div></div></div><div className="shell footerBottom"><span>Achal Gupta</span><span>Data · AI · Analytics Product Leadership</span><a href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
+      <footer><div className="shell footerGrid"><p className="sectionLabel light">What&apos;s next</p><div><h2>Building the next generation of Data &amp; AI products.</h2><div className="footerLinks"><a href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a><a href="/achal-portfolio/achal-gupta-executive-resume.pdf" download>Download executive profile <span>↓</span></a></div></div></div><div className="shell footerBottom"><span>Achal Gupta</span><span>Data · AI · Analytics Product Leadership</span><a href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
     </main>
   );
 }
