@@ -36,6 +36,8 @@ export default function LabPage() {
         </div>
       </header>
 
+      <section className="iqCard shell"><div><p className="sectionLabel">Independent project · In progress</p><h2>Underwriting IQ</h2><p>Agentic intelligence for automated life insurance underwriting—an end-to-end product discovery and governance case study.</p></div><a className="primaryButton" href="/underwriting-iq">Open project <span>↗</span></a></section>
+
       <section className="labPage shell">
         <div className="labTabs" role="tablist" aria-label="AI product artifacts">
           <button className={active === 'scorecard' ? 'labTab active' : 'labTab'} onClick={() => setActive('scorecard')}>Agent evaluation scorecard</button>
