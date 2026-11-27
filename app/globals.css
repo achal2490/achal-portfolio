@@ -161,3 +161,5 @@ footer { background:var(--ink); color:white; padding:92px 0 26px; }
 
 @media (max-width:700px){.proofRow{grid-template-columns:1fr;gap:6px}}
 
+
+.iqCard{margin:42px auto 0;padding:30px 0 34px;border-top:1px solid var(--line);border-bottom:1px solid var(--line);display:flex;justify-content:space-between;align-items:center;gap:30px}.iqCard h2{margin:9px 0 8px;font-size:34px;letter-spacing:-.04em}.iqCard p:not(.sectionLabel){margin:0;max-width:680px;color:var(--muted);font-size:15px;line-height:1.55}.iqCard .primaryButton{white-space:nowrap}@media(max-width:800px){.iqCard{display:grid;align-items:start}.iqCard .primaryButton{justify-self:start}}
