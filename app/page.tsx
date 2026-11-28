@@ -79,7 +79,7 @@ export default function Home() {
         </div>
         <div className="metrics">{outcomes.map((o) => <article className={o.wide ? "wideMetric" : ""} key={o.value}><strong><i className={o.trend === "down" ? "trendDown" : "trendUp"}>{o.trend === "down" ? "↓" : "↑"}</i>{o.value}</strong><span>{o.label}</span></article>)}</div>
         <p className="scopeLine">Data-side leadership across global commerce programs involving <strong>10–15 teams</strong> and <strong>30–40 cross-functional contributors</strong>.</p>
-      </section><section className="labPlaceholder" aria-labelledby="ai-lab-home"><div className="shell"><p className="sectionLabel light">AI Product Lab · Start here</p><h2 id="ai-lab-home">Practical AI product work, not just claims.</h2><p>Explore the current Underwriting IQ discovery project and the product artifacts I use to make AI opportunities testable, governed and measurable.</p><div className="footerLinks"><a href="/achal-portfolio/lab">Open the AI Lab <span>↗</span></a><a href="/achal-portfolio/underwriting-iq">View Underwriting IQ <span>↗</span></a></div></div></section><section className="companyBand" aria-label="Career experience">
+      </section><section className="companyBand" aria-label="Career experience">
         <div className="shell"><span className="companyLead">Experience across</span>{companies.map((company) => <span key={company}>{company}</span>)}</div>
       </section>
 
