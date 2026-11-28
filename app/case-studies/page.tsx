@@ -52,6 +52,19 @@ const cases = [
   }
 ];
 
+const artifactLabels = {
+  '01': ['Operating model', ['Governance', 'Support + SLA', 'Adoption telemetry']],
+  '02': ['Product ladder', ['Trusted data', 'Direct access', 'Premium value']],
+  '03': ['Prioritization lens', ['Reach', 'Strategic fit', 'Reusable value']],
+  '04': ['Learning loop', ['Manual journey', 'Customer signal', 'Next experiment']],
+  '05': ['Leadership arc', ['Build', 'Own', 'Lead']],
+};
+
+function Artifact({ number }: { number: string }) {
+  const [label, items] = artifactLabels[number as keyof typeof artifactLabels];
+  return <div className="artifact"><span>{label}</span><div>{items.map((item, index) => <React.Fragment key={item}><b>{item}</b>{index < items.length - 1 && <i>→</i>}</React.Fragment>)}</div><small>Illustrative product artifact · not a production system diagram</small></div>;
+}
+
 function Detail({ label, children }: { label: string; children: React.ReactNode }) {
   return <div className="detailBlock"><h3>{label}</h3><p>{children}</p></div>;
 }
@@ -60,8 +73,9 @@ export default function CaseStudiesPage() {
   return <main>
     <nav className="nav shell" aria-label="Primary navigation"><a className="brand" href="/achal-portfolio/" aria-label="Achal Gupta home">AG<span>.</span></a><div className="navLinks"><a href="/achal-portfolio/">Home</a><a href="/achal-portfolio/lab">AI Lab</a><a href="/achal-portfolio/case-studies" className="active">Case studies</a><a href="/achal-portfolio/experience">Work experience</a><a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></nav>
     <header className="caseHero shell"><p className="sectionLabel">Portfolio case studies</p><h1>Product judgment across Data, AI, analytics and commercialization.</h1><p>Five professional case studies showing how I frame problems, make trade-offs, work through constraints and build products that are usable, supportable and commercially coherent.</p></header>
-    <section className="caseStudyList shell">{cases.map((item) => <article className="fullCase" key={item.number}><div className="fullCaseTop"><span>{item.number}</span><div><p className="caseTag">{item.company} · {item.label}</p><h2>{item.title}</h2><p className="fullTags">{item.tags}</p></div></div><div className="detailGrid"><Detail label="Challenge">{item.challenge}</Detail><Detail label="What I did">{item.did}</Detail><Detail label="Key decision">{item.decision}</Detail><Detail label="Outcome">{item.outcome}</Detail></div><div className="principle"><span>Product principle</span><p>{item.principle}</p></div></article>)}</section>
+    <section className="caseStudyList shell">{cases.map((item) => <article className="fullCase" key={item.number}><div className="fullCaseTop"><span>{item.number}</span><div><p className="caseTag">{item.company} · {item.label}</p><h2>{item.title}</h2><p className="fullTags">{item.tags}</p></div></div><Artifact number={item.number} /><div className="detailGrid"><Detail label="Challenge">{item.challenge}</Detail><Detail label="What I did">{item.did}</Detail><Detail label="Key decision">{item.decision}</Detail><Detail label="Outcome">{item.outcome}</Detail></div><div className="principle"><span>Product principle</span><p>{item.principle}</p></div></article>)}</section>
     <section className="labPlaceholder"><div className="shell"><p className="sectionLabel light">Independent AI Product Lab</p><h2>Underwriting IQ: discovery before engineering.</h2><p>Phase 1 documents an evidence-boundary-first approach to proactive underwriting rule discovery. It is an independent product case study, not professional employment or a production enterprise deployment.</p><a className="lightLink" href="/achal-portfolio/underwriting-iq">Read the Phase 1 case study →</a></div></section>
+    <style>{`.artifact{margin:28px 0;padding:22px;background:#ebe6da;border-left:4px solid #67821f}.artifact>span{display:block;color:#73807d;font-size:10px;text-transform:uppercase;letter-spacing:.12em;font-weight:800}.artifact>div{display:flex;align-items:center;gap:12px;margin:18px 0;flex-wrap:wrap}.artifact b{padding:12px 14px;background:#102624;color:#d9ff63;font-size:13px}.artifact i{color:#67821f;font-style:normal;font-size:20px}.artifact small{color:#73807d;font-size:11px}@media(max-width:600px){.artifact>div{display:grid;grid-template-columns:1fr}.artifact i{text-align:center;transform:rotate(90deg)}}`}</style>
     <footer><div className="shell footerBottom"><span>Achal Gupta</span><span>Data · AI · Analytics Product Leadership</span><a href="/achal-portfolio/">Back to portfolio ↑</a></div></footer>
   </main>;
 }
