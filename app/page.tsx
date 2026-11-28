@@ -1,109 +1,26 @@
 const outcomes = [
   { value: "€500K", label: "annual analytics product revenue owned", trend: "up" },
   { value: "7%", label: "revenue growth contribution from new products", trend: "up" },
-  { value: "80%", label: "adhoc reporting effort reduction", trend: "down", wide: true },
+  { value: "80%", label: "adhoc reporting effort reduction", trend: "down" },
 ];
 
-const companies = ["SiriusXM", "Munich Re", "PCH International", "AMCS", "Deloitte"];
-
-const caseStudies = [
-  {
-    number: "01",
-    tag: "Enterprise GenAI adoption",
-    title: "Turning an AI pilot into a governed path to enterprise adoption",
-    decision: "Create a repeatable operating model before expanding adoption.",
-    copy: "Defined governance, best practices, SLAs, and the support model for Databricks Genie agents. Enabled initial adoption across Finance, Contact Centre, Marketing, and Content Strategy, then built a reusable dashboard to track usage, adoption, and feedback.",
-    meta: ["4 initial business functions", "10+ early business users", "Reusable adoption dashboard"],
-    challenge: "Business users needed faster access to trusted data without adding unmanaged AI risk.",
-    strategy: "Create governance, support, SLAs, and best practices before scaling adoption.",
-    execution: "Partnered with the Data Organization and four business functions to define and measure the operating model.",
-    impact: "Enabled initial adoption across approximately 10 users and created a reusable measurement system.",
-  },
-  {
-    number: "02",
-    tag: "Enterprise commerce",
-    title: "Giving Data and Analytics a clear voice in complex commerce change",
-    decision: "Align data dependencies and success measures across a fragmented program.",
-    copy: "Leads the Data Product and Analytics dimension of major commerce initiatives involving 10–15 teams and 30–40 cross-functional contributors across the US, UK, Ireland, and EMEA.",
-    meta: ["30–40 cross-functional contributors", "4 regions", "Director-to-VP stakeholders"],
-    challenge: "Complex commerce programs needed aligned data dependencies, instrumentation, and success measures.",
-    strategy: "Give Data and Analytics a clear product voice across a fragmented program.",
-    execution: "Coordinated requirements and decisions across product, engineering, finance, billing, analytics, and governance leaders.",
-    impact: "Improved decision readiness across global commerce workstreams involving 10–15 teams.",
-  },
-  {
-    number: "03",
-    tag: "Commercial product growth",
-    title: "Taking an analytics product from customer signal to global markets",
-    decision: "Prioritize the highest-value customer needs and sequence expansion by market readiness.",
-    copy: "Owned a €500K annual analytics product, continuously prioritized competing customer needs, and helped define pricing and go-to-market strategy for global customers across North America, LATAM, DACH/EMEA, and APAC.",
-    meta: ["€500K annual revenue", "Global market strategy", "7% growth contribution"],
-    challenge: "Global insurance customers needed analytics products that could scale across markets and use cases.",
-    strategy: "Prioritize the highest-value customer needs and sequence expansion by market readiness.",
-    execution: "Owned roadmap decisions, pricing input, vendor selection, and go-to-market planning with senior stakeholders.",
-    impact: "Owned a €500K annual product and contributed to 7% revenue growth and 15% NPS improvement.",
-  },
-];
-
-const principles = [
-  { title: "Create clarity across functions", copy: "Align business, analytics, engineering, governance, and executive stakeholders around explicit outcomes and trade-offs." },
-  { title: "Build reusable systems", copy: "Turn one-off delivery into standards, operating models, support processes, and measurement that can scale." },
-  { title: "Connect adoption to value", copy: "Use evidence—from usage and feedback to revenue and market expansion—to guide prioritization and investment." },
-];
-
-const experience = [
-  { years: "2025—Now", company: "SiriusXM", role: "Staff Data Product Manager", focus: "Enterprise AI adoption · Commerce data leadership · Product operating models" },
-  { years: "2023—2025", company: "Munich Re Automation Solutions", role: "Data Product Manager", focus: "Commercial product ownership · Pricing & GTM · Global expansion" },
-  { years: "2022—2023", company: "PCH International", role: "Product Manager", focus: "Fintech · Alternative lending · ESG analytics" },
-  { years: "2019—2022", company: "AMCS Group", role: "Senior Business Analyst", focus: "Enterprise analytics · Requirements · Automation" },
-];
-
-const articles = [
-  { number: "01", title: "Empathizing and Defining User Personas", summary: "Using research and generative AI to build and validate a grounded persona.", href: "https://www.linkedin.com/pulse/1-design-thinking-meets-ai-empathizing-defining-user-achal-gupta-dbqre/" },
-  { number: "02", title: "Mapping User Journeys", summary: "Combining journey mapping with AI validation to sharpen the problem statement.", href: "https://www.linkedin.com/pulse/2-design-thinking-meets-ai-mapping-user-journeys-achal-gupta-tdi1e/" },
-  { number: "03", title: "Ideation and Prioritization", summary: "Applying AI-supported ideation, story mapping, and MoSCoW prioritization.", href: "https://www.linkedin.com/pulse/3-design-thinking-meets-ai-ideation-using-story-mapping-achal-gupta-wfdee/" },
+const cases = [
+  ["01", "Enterprise GenAI", "Governed Databricks Agents adoption", "Defined governance, best practices, SLAs, support and reusable adoption measurement for an enterprise AI capability."],
+  ["02", "Commerce data leadership", "Data product leadership across global change", "Led the Data Product and Analytics dimension across complex commerce programs involving 10–15 teams and 30–40 contributors."],
+  ["03", "Commercial product growth", "Analytics product ownership and expansion", "Owned a €500K annual analytics product and contributed to pricing, prioritization and global market sequencing."],
 ];
 
 export default function Home() {
   return (
     <main>
       <nav className="nav shell" aria-label="Primary navigation"><a className="brand" href="/achal-portfolio/" aria-label="Achal Gupta home">AG<span>.</span></a><div className="navLinks"><a href="/achal-portfolio/" className="active">Home</a><a href="/achal-portfolio/lab">AI Lab</a><a href="/achal-portfolio/case-studies">Case studies</a><a href="/achal-portfolio/experience">Work experience</a><a className="navCta" href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></nav>
-
-      <section className="hero shell" id="top">
-        <div className="eyebrow"><span />Staff Data Product Manager at SiriusXM</div>
-        <h1>Turning Data &amp; AI strategy into products that scale—and outcomes that matter.</h1>
-        <p className="heroCopy">Fourteen-plus years across product strategy, analytics, and engineering—connecting enterprise ambition to governed adoption, commercial outcomes, and global growth.</p>
-        <div className="heroActions">
-          <a className="primaryButton" href="/achal-portfolio/lab">Explore the AI Lab <span>↗</span></a><a className="textLink" href="mailto:achal2490@gmail.com">Discuss a leadership opportunity</a>
-          <a className="textLink" href="/achal-gupta-executive-resume.pdf" download>Download executive résumé ↓</a>
-        </div>
-        <div className="metrics">{outcomes.map((o) => <article className={o.wide ? "wideMetric" : ""} key={o.value}><strong><i className={o.trend === "down" ? "trendDown" : "trendUp"}>{o.trend === "down" ? "↓" : "↑"}</i>{o.value}</strong><span>{o.label}</span></article>)}</div>
-        <p className="scopeLine">Data-side leadership across global commerce programs involving <strong>10–15 teams</strong> and <strong>30–40 cross-functional contributors</strong>.</p>
-      </section><section className="companyBand" aria-label="Career experience">
-        <div className="shell"><span className="companyLead">Experience across</span>{companies.map((company) => <span key={company}>{company}</span>)}</div>
-      </section>
-
-      <section className="work shell" id="impact">
-        <div className="sectionHeading"><p className="sectionLabel">Selected impact</p><div><h2>Three examples of product judgment in action.</h2><p>Explore the detailed case studies behind my Data, AI, analytics, and commercialization work.</p></div></div>
-        <div className="caseList">{caseStudies.map((item) => <article className="case" key={item.number}><div className="caseIndex">{item.number}</div><div className="caseBody"><p className="caseTag">{item.tag}</p><h3>{item.title}</h3><p className="decision">{item.copy}</p><ul>{item.meta.map((m) => <li key={m}>{m}</li>)}</ul></div></article>)}</div>
-        <a className="textLink" href="/achal-portfolio/case-studies">View all case studies →</a>
-      </section>
-'      \n      <section className="leadership" id="leadership">
-        <div className="shell"><div className="leadershipIntro"><p className="sectionLabel light">How I lead</p><div><h2>Influence built on clarity, systems, and evidence.</h2><p>My leadership approach for complex Data and AI product environments.</p></div></div><a className="lightLink" href="/achal-portfolio/leadership">Explore leadership approach →</a></div>
-      </section>
-
-'      <section className="toolkit"><div className="shell"><div className="sectionHeading compact"><p className="sectionLabel">Product toolkit</p><div><h2>Technical fluency with an operator&apos;s mindset.</h2><p>Comfortable moving from strategy and customer evidence to data requirements, governance, measurement, and delivery.</p></div></div><div className="toolGrid"><span>Databricks Genie AI</span><span>Azure data platforms</span><span>SQL &amp; data pipelines</span><span>Power BI &amp; KPI dashboards</span><span>Data governance &amp; SLAs</span><span>PRD / BRD development</span><span>Roadmaps &amp; prioritization</span><span>Pricing &amp; go-to-market</span></div></div></section>
-
-'      <section className="experience" id="experience">
-        <div className="shell"><div className="sectionHeading compact"><p className="sectionLabel">Experience</p><div><h2>Fourteen-plus years across data, analytics, and product.</h2><p>A career arc from engineering and BI to enterprise product leadership.</p></div></div><a className="textLink" href="/achal-portfolio/experience">View full experience →</a></div>
-      </section>
-
-''      <section className="writing" id="thinking">
-        <div className="shell"><div className="writingIntro"><p className="sectionLabel">Writing</p><div><h2>Product judgment in the age of AI.</h2><p>Three essays on applying design thinking with AI.</p></div></div><a className="textLink" href="/achal-portfolio/writing">Read the article series →</a></div>
-      </section>
-
-'      <footer><div className="shell footerGrid"><p className="sectionLabel light">What&apos;s next</p><div><h2>Building the next generation of Data &amp; AI products.</h2><div className="footerLinks"><a href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a><a href="/achal-gupta-executive-resume.pdf" download>Download executive profile <span>↓</span></a></div></div></div><div className="shell footerBottom"><span>Achal Gupta</span><span>Data · AI · Analytics Product Leadership</span><a href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
+      <section className="hero shell" id="top"><div className="eyebrow"><span />Staff Data Product Manager · SiriusXM</div><h1>Turning Data &amp; AI strategy into products that scale—and outcomes that matter.</h1><p className="heroCopy">Data and AI product leader connecting enterprise ambition to governed adoption, commercial outcomes and global growth across analytics, automation and complex operating environments.</p><div className="heroActions"><a className="primaryButton" href="/achal-portfolio/lab">Explore the AI Lab <span>↗</span></a><a className="textLink" href="/achal-portfolio/case-studies">Review selected work →</a><a className="textLink" href="mailto:achal2490@gmail.com">Contact me</a></div><div className="metrics">{outcomes.map((o) => <article key={o.value}><strong><i className={o.trend === "down" ? "trendDown" : "trendUp"}>{o.trend === "down" ? "↓" : "↑"}</i>{o.value}</strong><span>{o.label}</span></article>)}</div></section>
+      <section className="executiveProof"><div className="shell proofGrid"><div><p className="sectionLabel light">Executive profile</p><h2>Strategy, systems and influence across the data value chain.</h2></div><div className="proofItems"><p><strong>Enterprise scope</strong><span>Data-side leadership across global commerce programmes involving 10–15 teams and 30–40 contributors.</span></p><p><strong>Senior stakeholder range</strong><span>Directors, Senior Directors and VPs across Finance, Analytics, Contact Centre, Billing, Data Engineering and Governance.</span></p><p><strong>Leadership style</strong><span>Influence without formal authority: clarify the decision, make trade-offs visible and build the operating model around the product.</span></p></div></div></section>
+      <section className="work shell" id="impact"><div className="sectionHeading"><p className="sectionLabel">Selected impact</p><div><h2>Three examples of product judgment in action.</h2><p>Short executive summaries first; detailed decisions and evidence are available in the case studies.</p></div></div><div className="caseList">{cases.map(([number, tag, title, copy]) => <article className="case" key={number}><div className="caseIndex">{number}</div><div className="caseBody"><p className="caseTag">{tag}</p><h3>{title}</h3><p className="decision">{copy}</p></div></article>)}</div><a className="textLink" href="/achal-portfolio/case-studies">View all case studies →</a></section>
+      <section className="labFeature"><div className="shell labFeatureGrid"><div><p className="sectionLabel light">Practical AI Lab</p><h2>See how I turn AI opportunity into a testable product decision.</h2><p>Explore the operating model, evidence discipline, evaluation canvas and Underwriting IQ discovery route. Built artifacts are labelled separately from future concepts.</p><a className="lightLink" href="/achal-portfolio/lab">Enter the AI Lab ↗</a></div><div className="miniFlow"><div><span>01</span><b>Discover</b></div><i>→</i><div><span>02</span><b>Design</b></div><i>→</i><div><span>03</span><b>Evaluate</b></div></div></div></section>
+      <section className="toolkit shell"><div className="sectionHeading compact"><p className="sectionLabel">Product toolkit</p><div><h2>Technical fluency with an operator&apos;s mindset.</h2><p>Governance, data requirements, measurement, delivery, prioritization and commercialization.</p></div></div><div className="toolGrid"><span>Databricks Agents</span><span>Azure data platforms</span><span>SQL &amp; data pipelines</span><span>Power BI &amp; KPI dashboards</span><span>Data governance &amp; SLAs</span><span>PRD / BRD development</span><span>Roadmaps &amp; prioritization</span><span>Pricing &amp; go-to-market</span></div></section>
+      <footer><div className="shell footerGrid"><p className="sectionLabel light">What&apos;s next</p><div><h2>Building the next generation of Data &amp; AI products.</h2><div className="footerLinks"><a href="mailto:achal2490@gmail.com">Discuss a leadership opportunity <span>↗</span></a><a href="/achal-gupta-executive-resume.pdf" download>Download executive résumé <span>↓</span></a></div></div></div><div className="shell footerBottom"><span>Achal Gupta</span><span>Data · AI · Analytics Product Leadership</span><a href="https://ie.linkedin.com/in/achal2490" target="_blank" rel="noreferrer">LinkedIn ↗</a></div></footer>
+      <style>{`.executiveProof{background:var(--ink);color:white;padding:72px 0}.proofGrid{display:grid;grid-template-columns:.85fr 1.15fr;gap:80px}.executiveProof h2{color:var(--lime);font-size:clamp(32px,4vw,54px);line-height:1.02;letter-spacing:-.04em;margin:14px 0}.proofItems{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}.proofItems p{margin:0;padding-top:14px;border-top:1px solid rgba(255,255,255,.25)}.proofItems strong,.proofItems span{display:block}.proofItems strong{color:white;font-size:15px;margin-bottom:10px}.proofItems span{color:#b7c5c2;font-size:13px;line-height:1.5}.labFeature{background:#16332f;color:white;padding:80px 0}.labFeatureGrid{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}.labFeature h2{color:var(--lime);font-size:clamp(34px,4vw,52px);line-height:1.02;letter-spacing:-.04em;margin:14px 0}.labFeature p:not(.sectionLabel){color:#c6d2ce;line-height:1.6;max-width:560px}.miniFlow{display:flex;align-items:center;justify-content:center;gap:12px}.miniFlow div{display:grid;gap:9px;padding:22px 18px;background:#102624;min-width:105px}.miniFlow span{color:#aebcb9;font-size:10px;font-weight:800}.miniFlow b{color:white}.miniFlow i{color:var(--lime);font-size:22px}.toolkit{padding-top:84px;padding-bottom:84px}@media(max-width:800px){.proofGrid,.labFeatureGrid{grid-template-columns:1fr;gap:35px}.proofItems{grid-template-columns:1fr}.miniFlow{justify-content:flex-start}.toolkit{padding-top:60px;padding-bottom:60px}}`}</style>
     </main>
   );
 }
-
